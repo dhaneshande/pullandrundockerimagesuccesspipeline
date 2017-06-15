@@ -1,5 +1,5 @@
 jobs:
-- name: pullandrundockerimage
+- name: Image-Pull-and-Run
   plan:
   - task: say-hello
     config:
@@ -15,5 +15,7 @@ jobs:
           pwd
           ls -R
           cd /usr/src/app
+          ls -R
           npm install
           npm start
+          
