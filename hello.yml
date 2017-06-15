@@ -1,0 +1,19 @@
+jobs:
+- name: hello-world
+  plan:
+  - task: say-hello
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: dhaneshande/nodecf}
+      run:
+        path: /bin/bash
+        args:
+        - -exc
+        - |
+          pwd
+          ls -R
+          cd /usr/src/app
+          npm install
+          npm start
